@@ -32,9 +32,9 @@ object NetworkModule {
     }
 
     @Provides
+    @Singleton
     fun getService(): ApiService {
         return createRetrofit(getOkhttpClient()).create(ApiService::class.java)
     }
-
 
 }

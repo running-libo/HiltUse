@@ -2,17 +2,16 @@ package com.example.hiltuse
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.hiltuse.di.NetworkModule
-import dagger.hilt.android.lifecycle.HiltViewModel
+import dagger.hilt.android.scopes.ActivityRetainedScoped
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-@HiltViewModel
+@ActivityRetainedScoped
 class MyViewModel @Inject constructor() : ViewModel() {
 
     fun loadData() {
         viewModelScope.launch {
-            NetworkModule.getService().getArticle(0)
+
         }
     }
 }
