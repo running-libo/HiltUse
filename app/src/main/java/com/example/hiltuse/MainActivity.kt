@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
     @Inject
     lateinit var truck: Truck
 
+    private val viewModel: MyViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
